@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+    <div id="app">
+        <button onclick="mostrarAlerta()">Me Pressione</button>
+        <button onmouseover="mostrarAlerta()">Me Pressione</button>
+        <label for="nome">
+            <input type="text" id="nome" name="nome">
+            <button class="botao">Adicionar</button>
+        </label>
+    </div>
+    <script>
+      var inputElement = document.querySelector('input[name=nome]');
+      var btnElement = document.querySelector('button.botao');
+
+      btnElement.onclick = function () {
+          var text = inputElement.value;
+          alert(text)
+      };
+      console.log(inputElement);
+      console.log(btnElement);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+<div id="app">
+</div>
+<script>
+   var buttonElement = document.createElement('button');
+   var containerElement = document.querySelector('#app');
+   containerElement.appendChild(buttonElement);
+
+   buttonElement.setAttribute('class', 'botao');
+
+   var textElement = document.createTextNode('Criar um quadrado');
+   buttonElement.appendChild(textElement);
+
+
+  function createBoxElement() {
+      var divElement = document.createElement('div');
+      var containerElementButton = document.querySelector('#app');
+      containerElementButton.appendChild(divElement);
+      divElement.setAttribute('class', 'box');
+      divElement.style.width = 100;
+      divElement.style.height = 100;
+      divElement.style.backgroundColor = '#000';
+  }
+   buttonElement.onclick = function() {createBoxElement();};
+</script>
+</body>
+</html>
